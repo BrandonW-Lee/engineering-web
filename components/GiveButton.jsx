@@ -1,9 +1,12 @@
 import React from 'react';
+import { Button } from './ui/button';
+import { Mail } from 'lucide-react';
 
 export default function GiveButton() {
   return (
-    <button className="h-full px-6 py-2 bg-yellow hover:opacity-60">
+    <Button>
+      <Mail className="mr-2 h-4 w-4" />
       Give
-    </button>
+    </Button>
   );
 }

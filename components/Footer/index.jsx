@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -21,10 +22,14 @@ export default function Footer() {
             </Link>
             <div>Worship - 11:30 AM</div>
             <div className="flex gap-4">
-              <Link href="https://facebook.com/nlvcbridge">Facebook</Link>
-              <Link href="https://www.instagram.com/nlvcbridge">Instagram</Link>
+              <Link href="https://facebook.com/nlvcbridge">
+                <Facebook />
+              </Link>
+              <Link href="https://www.instagram.com/nlvcbridge">
+                <Instagram />
+              </Link>
               <Link href="https://www.youtube.com/channel/UC3RUcVHeVhXzG9n62yhVL9w">
-                YouTube
+                <Youtube />
               </Link>
             </div>
           </div>
