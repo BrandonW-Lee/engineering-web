@@ -1,10 +1,10 @@
 import React from 'react';
-import TopNavigationBarDesktop from './TopNavigationBarDesktop';
+import TopNavigationBar from './TopNavigationBar';
 
 export default function Header() {
   return (
     <>
-      <TopNavigationBarDesktop />
+      <TopNavigationBar />
     </>
   );
 }

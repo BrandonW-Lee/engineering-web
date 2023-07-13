@@ -4,8 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import GiveButton from '../GiveButton';
+import Navigation from './Navigation';
 
-export default function TopNavigationBarDesktop() {
+export default function TopNavigationBar() {
   return (
     <div className="hidden sm:block z-10 w-full border-b border-gray-200">
       <div className="container flex justify-between items-center mx-auto">
@@ -17,20 +18,7 @@ export default function TopNavigationBarDesktop() {
             height={75}
           />
         </Link>
-        <div>
-          <Link href="/welcome" className="mx-3 p-2 hover:text-yellow">
-            Welcome
-          </Link>
-          <Link href="/about" className="mx-3 p-2 hover:text-yellow">
-            About
-          </Link>
-          <Link href="/connect" className="mx-3 p-2 hover:text-yellow">
-            Connect
-          </Link>
-          <Link href="/worship" className="mx-3 p-2 hover:text-yellow">
-            Worship
-          </Link>
-        </div>
+        <Navigation />
         <GiveButton />
       </div>
     </div>
