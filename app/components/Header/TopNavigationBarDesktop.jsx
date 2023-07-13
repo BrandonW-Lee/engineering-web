@@ -18,16 +18,16 @@ export default function TopNavigationBarDesktop() {
           />
         </Link>
         <div>
-          <Link href="/welcome" className="mx-3 hover:text-yellow">
+          <Link href="/welcome" className="mx-3 p-2 hover:text-yellow">
             Welcome
           </Link>
-          <Link href="/about" className="mx-3 hover:text-yellow">
+          <Link href="/about" className="mx-3 p-2 hover:text-yellow">
             About
           </Link>
-          <Link href="/connect" className="mx-3 hover:text-yellow">
+          <Link href="/connect" className="mx-3 p-2 hover:text-yellow">
             Connect
           </Link>
-          <Link href="/worship" className="mx-3 hover:text-yellow">
+          <Link href="/worship" className="mx-3 p-2 hover:text-yellow">
             Worship
           </Link>
         </div>
