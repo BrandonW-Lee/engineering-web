@@ -21,32 +21,10 @@ export default function Footer() {
             </Link>
             <div>Worship - 11:30 AM</div>
             <div className="flex gap-4">
-              <Link href="https://facebook.com">
-                <Image
-                  className="bg-white rounded-sm"
-                  src="/facebook.svg"
-                  alt="facebook logo"
-                  width={24}
-                  height={24}
-                />
-              </Link>
-              <Link href="https://facebook.com">
-                <Image
-                  className="bg-white rounded-sm"
-                  src="/instagram.svg"
-                  alt="instagram logo"
-                  width={24}
-                  height={24}
-                />
-              </Link>
-              <Link href="https://facebook.com">
-                <Image
-                  className="bg-white rounded-sm"
-                  src="/youtube.svg"
-                  alt="youtube logo"
-                  width={24}
-                  height={24}
-                />
+              <Link href="https://facebook.com/nlvcbridge">Facebook</Link>
+              <Link href="https://www.instagram.com/nlvcbridge">Instagram</Link>
+              <Link href="https://www.youtube.com/channel/UC3RUcVHeVhXzG9n62yhVL9w">
+                YouTube
               </Link>
             </div>
           </div>

@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'NLVC | THE BRIDGE',
-  description: 'Welcome to the Bridge. A place to connect!',
 };
 
 export default function RootLayout({ children }) {
@@ -16,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="min-h-screen bg-yellow">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
