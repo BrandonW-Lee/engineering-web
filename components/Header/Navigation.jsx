@@ -11,7 +11,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-
 import ListItem from './ListItem';
 
 export default function Navigation() {
@@ -54,14 +53,14 @@ export default function Navigation() {
                   </div>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Mission and Vision">
-                Mission and Vision
+              <ListItem href="/Announcements" title="Announcements">
+                Announcements
               </ListItem>
-              <ListItem href="/docs/installation" title="Pastoral Staff">
-                Staff
+              <ListItem href="/bridge-groups" title="Bridge Groups">
+                Bridge Groups
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Welcome">
-                Welcome
+              <ListItem href="/committees" title="Committees">
+                Committees
               </ListItem>
             </ul>
           </NavigationMenuContent>
