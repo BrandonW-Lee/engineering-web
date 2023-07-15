@@ -12,6 +12,7 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import ListItem from './ListItem';
+import { Circle } from 'lucide-react';
 
 export default function Navigation() {
   return (
@@ -30,13 +31,13 @@ export default function Navigation() {
                 </NavigationMenuLink>
               </li>
               <ListItem href="/docs" title="Mission and Vision">
-                Mission and Vision
+                Receive the truth that Jesus Christ died for you and your sins!
               </ListItem>
               <ListItem href="/docs/installation" title="Pastoral Staff">
-                Staff
+                Learn more about our leaders.
               </ListItem>
               <ListItem href="/docs/primitives/typography" title="Welcome">
-                Welcome
+                Welcome to The Bridge, a place to connect!
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -53,14 +54,14 @@ export default function Navigation() {
                   </div>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/Announcements" title="Announcements">
-                Announcements
+              <ListItem href="/announcements" title="Announcements">
+                Stay up-to-date with our latest announcements.
               </ListItem>
               <ListItem href="/bridge-groups" title="Bridge Groups">
-                Bridge Groups
+                Get plugged in.
               </ListItem>
               <ListItem href="/committees" title="Committees">
-                Committees
+                Discover opportunities to serve.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -68,7 +69,25 @@ export default function Navigation() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Media</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink>Link</NavigationMenuLink>
+            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <li className="row-span-3">
+                <NavigationMenuLink asChild>
+                  <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                    <div className="mb-2 mt-4 text-lg font-medium">Media</div>
+                    <p className="text-sm leading-tight text-muted-foreground"></p>
+                  </div>
+                </NavigationMenuLink>
+              </li>
+              <ListItem href="/live" title="Live Stream">
+                Join us for worship, Sunday mornings at 11:30am.
+              </ListItem>
+              <ListItem href="/photos" title="Photos">
+                View photos of our awesome English ministry!
+              </ListItem>
+              <ListItem href="/sermons" title="Sermons">
+                Find videos of our previous sermons.
+              </ListItem>
+            </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
