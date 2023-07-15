@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function Home() {
-  return <div className="container mx-auto">woah</div>;
+  return <div className="container mx-auto">Home</div>;
 }

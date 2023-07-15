@@ -30,14 +30,14 @@ export default function Navigation() {
                   </div>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Mission and Vision">
-                Receive the truth that Jesus Christ died for you and your sins!
+              <ListItem href="/mission" title="Mission and Vision">
+                Exalting God, and exemplifying Christ-likeness.
               </ListItem>
-              <ListItem href="/docs/installation" title="Pastoral Staff">
-                Learn more about our leaders.
+              <ListItem href="/staff" title="Pastoral Staff">
+                Learn more about our leadership and staff.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Welcome">
-                Welcome to The Bridge, a place to connect!
+              <ListItem href="/welcome" title="Welcome">
+                We&apos;re a place to connect with God and others.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -58,10 +58,10 @@ export default function Navigation() {
                 Stay up-to-date with our latest announcements.
               </ListItem>
               <ListItem href="/bridge-groups" title="Bridge Groups">
-                Get plugged in.
+                Join a Bridge Group and get connected.
               </ListItem>
               <ListItem href="/committees" title="Committees">
-                Discover opportunities to serve.
+                Discover opportunities to serve with us.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -89,6 +89,13 @@ export default function Navigation() {
               </ListItem>
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
