@@ -8,7 +8,9 @@ export const metadata = {
 export default function Welcome() {
   return (
     <div className="container mx-auto">
-      <TypographyH1>Welcome</TypographyH1>
+      <div className="mt-12">
+        <TypographyH1>Welcome</TypographyH1>
+      </div>
     </div>
   );
 }
