@@ -33,6 +33,9 @@ export default function Footer() {
               </Link>
             </div>
           </div>
+          <div className="justify-self-end self-end ml-auto">
+            &copy; The Bridge 2023
+          </div>
         </div>
       </div>
     </div>
