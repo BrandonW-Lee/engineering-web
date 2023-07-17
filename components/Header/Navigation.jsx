@@ -12,7 +12,6 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import ListItem from './ListItem';
-import { Circle } from 'lucide-react';
 
 export default function Navigation() {
   return (
@@ -79,7 +78,7 @@ export default function Navigation() {
                 </NavigationMenuLink>
               </li>
               <ListItem href="/live" title="Live Stream">
-                Join us for worship, Sunday mornings at 11:30am.
+                Join us for worship, Sunday mornings at 11:30 AM.
               </ListItem>
               <ListItem href="/photos" title="Photos">
                 View photos of our awesome English ministry!
