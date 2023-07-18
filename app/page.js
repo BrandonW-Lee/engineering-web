@@ -1,3 +1,5 @@
+import HeroImage from '@/components/HeroImage';
+
 export const metadata = {
   title: 'NLVC | THE BRIDGE',
   description:
@@ -5,5 +7,13 @@ export const metadata = {
 };
 
 export default function Home() {
-  return <div className="container mx-auto">Home</div>;
+  return (
+    <div className="h-full">
+      <HeroImage
+        src="https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/64a99fa5-73fa-46cc-2d6f-748ca607b100/hero"
+        alt="nlvc home page hero image"
+      />
+      <div className="container mx-auto">Home</div>
+    </div>
+  );
 }
