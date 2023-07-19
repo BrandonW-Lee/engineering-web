@@ -7,7 +7,8 @@ import { TypographyP } from '@/components/ui/typography/TypographyP';
 
 export const metadata = {
   title: 'Welcome | THE BRIDGE',
-  description: '',
+  description:
+    'Discover the Good News of the Gospel | Learn how to enter into a relationship with God through the person of Jesus Christ. Explore key Bible verses, including Romans 3:23, 6:23, 5:8, and 10:9-10. Rejoice in the care and provision of God with Romans 8:1. THE BRIDGE invites you to embrace the free gift of eternal life in Christ Jesus our Lord.',
 };
 
 const verses = [
@@ -45,12 +46,10 @@ const verses = [
 
 export default function Welcome() {
   return (
-    <div className="container mx-auto">
-      <div className="py-12">
-        <TypographyH1>Welcome</TypographyH1>
-        <div className="mt-8">
-          <TypographyH2>The Good News of the Gospel</TypographyH2>
-        </div>
+    <div className="container mx-auto py-12 sm:pb-24">
+      <TypographyH1>Welcome</TypographyH1>
+      <section className="mt-12">
+        <TypographyH2>The Good News of the Gospel</TypographyH2>
         <div className="mt-8">
           <TypographyP>
             Christianity is more than merely just a religion. It actually is
@@ -69,7 +68,7 @@ export default function Welcome() {
                 {index + 1}. {verse.title}
               </TypographyH3>
               <div className="sm:w-3/4">
-                <TypographyBlockquote>{verse.quote}</TypographyBlockquote>
+                <TypographyBlockquote>{verse.quote}</TypographyBlockquote>{' '}
               </div>
               <div className="mt-8 text-right">
                 <TypographyH4>{verse.reference}</TypographyH4>
@@ -77,7 +76,7 @@ export default function Welcome() {
             </div>
           );
         })}
-      </div>
+      </section>
     </div>
   );
 }
