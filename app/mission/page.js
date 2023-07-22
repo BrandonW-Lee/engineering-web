@@ -7,8 +7,32 @@ import { TypographyP } from '@/components/ui/typography/TypographyP';
 
 export const metadata = {
   title: 'Mission and Vision | THE BRIDGE',
-  description: '',
+  description:
+    'Discover our Mission and Vision | Our mission is to exalt God, edify the brethren, equip the saints, evangelize the world, and exemplify Christ-likeness. Our vision is to be a place of connection with God and others. Theme verse: Hebrews 10:24-25.',
 };
+
+const verses = [
+  {
+    title: 'To exalt God with our lives for His glory.',
+    reference: '1 Corinthians 10:31',
+  },
+  {
+    title: 'To edify the brethren to love and good deeds.',
+    reference: 'Hebrews 10:24-25',
+  },
+  {
+    title: 'To equip the saints for the work of the ministry.',
+    reference: 'Ephesians 4:11-12',
+  },
+  {
+    title: 'To evangelize the world with the Gospel of the Lord Jesus Christ.',
+    reference: 'Matthew 28:16-20',
+  },
+  {
+    title: 'To exemplify Christ-likeness to a watching world.',
+    reference: 'John 13:34-35',
+  },
+];
 
 export default function Mission() {
   return (
@@ -17,15 +41,18 @@ export default function Mission() {
       <section className="mt-12">
         <TypographyH2>Mission</TypographyH2>
         <div className="mt-8">
-          <TypographyP>
-            Christianity is more than merely just a religion. It actually is
-            about a relationship with God through the person of the Lord Jesus
-            Christ. Religion tells us to “do” things in order to get to heaven.
-            Christianity invites us into relationship because of the finished
-            work that was “done” for us through the dying of Jesus Christ on the
-            cross. So how does one enter into a relationship with God. Here’s
-            what the Bible tells us:
-          </TypographyP>
+          {verses.map((verse, index) => {
+            return (
+              <div className="mt-8" key={verse.title}>
+                <TypographyH3>
+                  {index + 1}. {verse.title}
+                </TypographyH3>
+                <div className="mt-8 text-right">
+                  <TypographyH4>{verse.reference}</TypographyH4>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
       <section className="mt-12">
