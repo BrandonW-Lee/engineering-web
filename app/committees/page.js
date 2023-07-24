@@ -70,7 +70,8 @@ export default function Committees() {
                 objectFit="cover"
                 objectPosition="center"
               />
-              <div className="z-10">
+              <div className="absolute z-10 h-full w-full bg-black opacity-50" />
+              <div className="absolute text-white z-20 h-full w-full flex items-center justify-center">
                 <TypographyH3>{committee.title}</TypographyH3>
               </div>
             </div>

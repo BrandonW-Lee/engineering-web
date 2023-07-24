@@ -8,7 +8,7 @@ import Navigation from './Navigation';
 
 export default function TopNavigationBar() {
   return (
-    <div className="bg-white hidden sticky top-0 sm:block z-10 w-full border-b border-gray-200">
+    <div className="bg-white hidden sticky top-0 sm:block w-full border-b border-gray-200 z-50">
       <div className="container flex justify-between items-center mx-auto">
         <Link href="/">
           <Image
