@@ -32,7 +32,7 @@ export default function Navigation() {
               <ListItem href="/mission" title="Mission and Vision">
                 Exalting God, and exemplifying Christ-likeness.
               </ListItem>
-              <ListItem href="/staff" title="Staff">
+              <ListItem href="/leadership" title="Leadership">
                 Learn more about our leadership and staff.
               </ListItem>
               <ListItem href="/welcome" title="Welcome">

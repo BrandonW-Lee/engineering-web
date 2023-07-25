@@ -22,9 +22,8 @@ export default function Live() {
           height="720"
           src="https://www.youtube.com/embed/dK_yrW8siyc"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         />
       </div>
       <div className="mt-8 flex justify-center">
