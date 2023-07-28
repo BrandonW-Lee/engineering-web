@@ -35,7 +35,7 @@ export default function Staff() {
   return (
     <div className="container mx-auto py-12 sm:pb-24">
       <TypographyH1>Leadership</TypographyH1>
-      <div className="mt-8">
+      <div className="mt-12">
         <TypographyH2>Pastoral Staff</TypographyH2>
       </div>
       <div className="mt-8">
