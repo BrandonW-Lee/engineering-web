@@ -4,7 +4,7 @@ import { TypographyH3 } from '@/components/ui/typography/TypographyH3';
 import { TypographyLead } from '@/components/ui/typography/TypographyLead';
 import { TypographyP } from '@/components/ui/typography/TypographyP';
 import { TypographySmall } from '@/components/ui/typography/TypographySmall';
-import { AtSign, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
 
 export const metadata = {
@@ -57,7 +57,7 @@ export default function Staff() {
                   <TypographyH3>{leader.name}</TypographyH3>
                   <TypographyLead>{leader.title}</TypographyLead>
                   <div className="flex mt-2">
-                    <AtSign className="h-4 w-4 mr-1" />
+                    <Mail className="h-4 w-4 mr-1" />
                     <TypographySmall>
                       <a href={`mailto:${leader.email}`}>{leader.email}</a>
                     </TypographySmall>
