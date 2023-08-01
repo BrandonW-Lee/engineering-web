@@ -76,8 +76,9 @@ export default function Committees() {
               <div className="mt-2">
                 <TypographySmall>{committee.description}</TypographySmall>
               </div>
-              <div className="mt-4 h-60 w-full md:h-80 rounded-lg relative">
+              <div className="mt-4 h-60 w-full md:h-80 relative">
                 <Image
+                  className="rounded-lg"
                   alt={committee.title}
                   src={committee.src}
                   fill

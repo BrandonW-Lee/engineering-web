@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className="bg-black py-8 sm:pt-12 sm:pb-6">
+    <div className="bg-black py-8 sm:py-12">
       <div className="container mx-auto text-white">
         <div className="flex flex-col sm:flex-row">
           <Image

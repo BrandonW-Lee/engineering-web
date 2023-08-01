@@ -41,8 +41,11 @@ export default function Staff() {
       <div className="mt-8">
         {leadership.map((leader) => {
           return (
-            <div key={leader.name} className="flex mt-16 gap-8">
-              <div className="relative w-1/3 h-96">
+            <div
+              key={leader.name}
+              className="flex flex-col md:flex-row mt-16 gap-8"
+            >
+              <div className="relative w-full md:w-full lg:w-1/2 h-96">
                 <Image
                   className="rounded-sm"
                   alt={`portrait of ${leader.name}`}
