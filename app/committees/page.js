@@ -78,12 +78,10 @@ export default function Committees() {
               </div>
               <div className="mt-4 h-60 w-full md:h-80 relative">
                 <Image
-                  className="rounded-lg"
+                  className="rounded-lg object-cover"
                   alt={committee.title}
                   src={committee.src}
                   fill
-                  objectFit="cover"
-                  objectPosition="center"
                 />
               </div>
             </div>

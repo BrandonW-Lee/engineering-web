@@ -47,12 +47,10 @@ export default function Staff() {
             >
               <div className="relative w-full md:w-full lg:w-1/2 h-96">
                 <Image
-                  className="rounded-sm"
+                  className="rounded-sm object-cover"
                   alt={`portrait of ${leader.name}`}
                   src={leader.src}
                   fill
-                  objectFit="cover"
-                  objectPosition="center"
                 />
               </div>
               <div className="w-full">
