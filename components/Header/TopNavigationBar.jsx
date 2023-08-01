@@ -5,8 +5,7 @@ import Image from 'next/image';
 
 import GiveButton from '../GiveButton';
 import Navigation from './Navigation';
-import { Button } from '../ui/button';
-import { Menu } from 'lucide-react';
+import NavigationSheet from './NavigationSheet';
 
 export default function TopNavigationBar() {
   return (
@@ -37,9 +36,7 @@ export default function TopNavigationBar() {
               height={75}
             />
           </Link>
-          <Button variant="outline" size="icon">
-            <Menu />
-          </Button>
+          <NavigationSheet />
         </div>
       </div>
     </>
