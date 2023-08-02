@@ -64,7 +64,7 @@ export default function NavigationSheet() {
         </div>
         <SheetClose asChild>
           <Link href="/live" passHref className="w-full mt-2">
-            <Button variant="link">Watch Live</Button>
+            <Button variant="link">Live Stream</Button>
           </Link>
         </SheetClose>
         <SheetClose asChild>
