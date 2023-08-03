@@ -82,6 +82,7 @@ export default function Committees() {
                   alt={committee.title}
                   src={committee.src}
                   fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
               </div>
             </div>

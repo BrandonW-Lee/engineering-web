@@ -51,6 +51,7 @@ export default function Staff() {
                   alt={`portrait of ${leader.name}`}
                   src={leader.src}
                   fill
+                  sizes="(min-width: 768px) 33vw, 100vw "
                 />
               </div>
               <div className="w-full">

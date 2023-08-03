@@ -15,7 +15,7 @@ export default function Announcements() {
       <TypographyH1>Announcements</TypographyH1>
       <section className="mt-12">
         <TypographyH2>July 23, 2023</TypographyH2>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypographyH3>Welcome</TypographyH3>
           <TypographyP>
             Thank you for joining us for Sunday worship! If you are visiting us
@@ -23,21 +23,21 @@ export default function Announcements() {
             you receive our welcoming gift and meet with our pastors.
           </TypographyP>
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypographyH3>Prayer Time</TypographyH3>
           <TypographyP>
             We meet at 11 am every Sunday for a short prayer time. Please join
             us as we pray for our worship service and one another.
           </TypographyP>
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypographyH3>College Time</TypographyH3>
           <TypographyP>
             College Time is from 7 -10 pm on Fridays at church with P. Josh. We
             welcome all college students, and we offer free dinners.
           </TypographyP>
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypographyH3>
             Summer Bible Study/Challenges to the Bible
           </TypographyH3>
@@ -47,7 +47,7 @@ export default function Announcements() {
             pm (Bring Your Own), and study is from 8 pm - 9:15 pm in this room.
           </TypographyP>
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypographyH3>Affinity Group</TypographyH3>
           <TypographyP>
             Married without Children will meet in this room today for AG from
@@ -59,7 +59,7 @@ export default function Announcements() {
             <li>8/13: College</li>
           </TypographyList>
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypographyH3>Membership Class</TypographyH3>
           <TypographyP>
             If you have been attending the Bridge and would like to join as an
@@ -68,7 +68,7 @@ export default function Announcements() {
             7/30, 8/6 and 8/13. If you are interested, please signup today.
           </TypographyP>
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypographyH3>Dodgers</TypographyH3>
           <TypographyP>
             We are planning a Dodgers event for Friday, August 18. The start
@@ -76,7 +76,7 @@ export default function Announcements() {
             a person, and the deadline for signup/pay is August 6.
           </TypographyP>
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <TypographyH3>In-Person &amp; Online Giving</TypographyH3>
           <TypographyP>
             We have two ways to give. You can give in person by dropping off
