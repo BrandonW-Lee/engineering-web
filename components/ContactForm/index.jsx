@@ -1,6 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Send } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
@@ -8,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
+import { Textarea } from '../ui/textarea';
 
 const FormSchema = z.object({
   name: z.string().min(3, {
@@ -29,17 +30,18 @@ const FormSchema = z.object({
 export default function ContactForm() {
   const form = useForm({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
   });
 
   function onSubmit(data) {
     toast({
-      title: 'You submitted the following values:',
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      title: 'Your message has been sent!',
     });
+    form.reset();
   }
 
   return (
@@ -52,7 +54,7 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="John Smith" {...field} />
+                <Input placeholder="Jacob Cho" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -65,13 +67,33 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="john@gmail.com" {...field} />
+                <Input type="email" placeholder="jacob@gmail.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Message (optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="I'd like to know more about..."
+                  rows={10}
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit">
+          <Send className="mr-2 h-4 w-4" />
+          Send
+        </Button>
       </form>
     </Form>
   );
