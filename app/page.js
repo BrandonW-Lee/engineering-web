@@ -18,7 +18,7 @@ export default function Home() {
         src="https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8acd4c11-9213-4bcc-af60-213b81cfaf00/hero"
         alt="nlvc home page hero image"
       />
-      <div className="container mx-auto mt-40">
+      <div className="container mx-auto py-36 md:py-40">
         <div>
           <TypographyH1>Sunday Service</TypographyH1>
           <TypographyP>Join us for worship at 11:30 AM</TypographyP>
