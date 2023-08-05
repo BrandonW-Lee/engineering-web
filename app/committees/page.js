@@ -16,7 +16,7 @@ const committees = [
     description:
       'Volunteers who are willing and able to set up, arrange, build, and tear down equipment, chairs, stages, tables for our different ministry events.',
     email: 'operations@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/d63cbc6e-dd6b-4b73-4272-d27bbe620a00/public',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/55dc5391-d74f-4e4a-a444-fe5408691600/public',
   },
   {
     title: 'Missions',
@@ -37,7 +37,7 @@ const committees = [
     description:
       'Volunteers who are artistically gifted and willing to design, create, paint, make, build, and illustrate images for the church.',
     email: 'arts@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/f174aaa7-34c8-4c05-a5aa-2f74f68aa800/public',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/b13b9a9d-bd35-4b31-1337-ffbfaa101c00/public',
   },
   {
     title: 'Welcome',
@@ -83,6 +83,7 @@ export default function Committees() {
                   src={committee.src}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
+                  lazy
                 />
               </div>
             </div>

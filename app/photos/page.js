@@ -39,6 +39,18 @@ const photos = [
     alt: 'large group playing games in a circle',
     src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/6b06b119-fe1f-4140-df56-de917d862300/public',
   },
+  {
+    alt: 'man setting up donuts',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/ac9dcd62-acab-4ff9-7fb1-ab405c9f1000/public',
+  },
+  {
+    alt: 'guys pointing at bbq food',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8bb5ef9e-d8d3-40df-bc23-3845bbd56700/public',
+  },
+  {
+    alt: 'two guys arm wrestling',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/de21c6bb-cdea-458b-2a75-702882bfb000/public',
+  },
 ];
 
 export default function Photos() {
