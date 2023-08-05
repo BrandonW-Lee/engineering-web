@@ -23,7 +23,7 @@ export default function Footer() {
             >
               4226 E. Verdant St. Los Angeles, CA 90039
             </Link>
-            <div className="mt-3 sm:mt-0">Worship - 11:30 AM</div>
+            <div className="mt-3 sm:mt-0">Sunday service - 11:30 AM</div>
             <div className="flex gap-4 mt-3 sm:mt-0">
               <Link href="https://facebook.com/nlvcbridge">
                 <Facebook />
