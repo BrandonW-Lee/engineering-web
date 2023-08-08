@@ -14,10 +14,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <HeroImage
-        src="https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8acd4c11-9213-4bcc-af60-213b81cfaf00/hero"
-        alt="nlvc home page hero image"
-      />
+      <HeroImage src="/hero-1.jpg" alt="nlvc home page hero image" />
       <div className="container mx-auto py-36 md:py-40">
         <div>
           <TypographyH1>Sunday Service</TypographyH1>
