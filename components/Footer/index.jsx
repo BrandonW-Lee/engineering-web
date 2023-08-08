@@ -25,13 +25,16 @@ export default function Footer() {
             </Link>
             <div className="mt-3 sm:mt-0">Sunday service - 11:30 AM</div>
             <div className="flex gap-4 mt-3 sm:mt-0">
-              <Link href="https://facebook.com/nlvcbridge">
+              <Link href="https://facebook.com/nlvcbridge" target="_blank">
                 <Facebook />
               </Link>
-              <Link href="https://www.instagram.com/nlvcbridge">
+              <Link href="https://www.instagram.com/nlvcbridge" target="_blank">
                 <Instagram />
               </Link>
-              <Link href="https://www.youtube.com/channel/UC3RUcVHeVhXzG9n62yhVL9w">
+              <Link
+                href="https://www.youtube.com/channel/UC3RUcVHeVhXzG9n62yhVL9w"
+                target="_blank"
+              >
                 <Youtube />
               </Link>
             </div>

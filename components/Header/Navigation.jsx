@@ -83,7 +83,11 @@ export default function Navigation() {
               <ListItem href="/photos" title="Photos">
                 View photos of our awesome English ministry!
               </ListItem>
-              <ListItem href="/sermons" title="Sermons">
+              <ListItem
+                href="https://www.youtube.com/@nlvcbridge/playlists"
+                target="_blank"
+                title="Sermons"
+              >
                 Find videos of our previous sermons.
               </ListItem>
             </ul>

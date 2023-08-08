@@ -73,7 +73,12 @@ export default function NavigationSheet() {
           </Link>
         </SheetClose>
         <SheetClose asChild>
-          <Link href="/sermons" passHref className="w-full mt-2">
+          <Link
+            href="https://www.youtube.com/@nlvcbridge/playlists"
+            target="_blank"
+            passHref
+            className="w-full mt-2"
+          >
             <Button variant="link">Sermons</Button>
           </Link>
         </SheetClose>
