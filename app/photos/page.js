@@ -51,6 +51,10 @@ const photos = [
     alt: 'two guys arm wrestling',
     src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/de21c6bb-cdea-458b-2a75-702882bfb000/public',
   },
+  {
+    alt: 'womens ministry',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/0a3b4da9-5aa6-4c0a-3ac2-8e6baad9ee00/public',
+  },
 ];
 
 export default function Photos() {
@@ -68,7 +72,7 @@ export default function Photos() {
                   src={photo.src}
                   alt={photo.alt}
                   sizes="(min-width: 768px) 33vw, 100vw"
-                  lazy
+                  loading="lazy"
                 />
               </div>
             );

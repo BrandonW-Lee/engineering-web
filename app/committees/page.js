@@ -51,7 +51,7 @@ const committees = [
     description:
       "Volunteers who help coordinate, plan, and support the Women's ministry of the Bridge. This includes soul care, and all other ministries focusing on the sisters of the Bridge.",
     email: 'women@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/d63cbc6e-dd6b-4b73-4272-d27bbe620a00/public',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/7ff871bf-7275-46ad-71e4-3d3260302900/public',
   },
 ];
 
@@ -83,7 +83,7 @@ export default function Committees() {
                   src={committee.src}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
-                  lazy
+                  loading="lazy"
                 />
               </div>
             </div>
