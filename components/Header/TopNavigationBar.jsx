@@ -11,7 +11,7 @@ export default function TopNavigationBar() {
   return (
     <>
       {/* Desktop Navigation */}
-      <div className="bg-white hidden sticky top-0 sm:block w-full border-bborder-gray-200 z-50">
+      <div className="bg-white hidden sticky top-0 sm:block w-full border-b border-gray-200 z-50">
         <div className="container flex justify-between items-center mx-auto">
           <Link href="/">
             <Image
