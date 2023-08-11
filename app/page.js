@@ -1,8 +1,5 @@
-import HeroImage from '@/components/HeroImage';
-import { TypographyBlockquote } from '@/components/ui/typography/TypographyBlockquote';
+import HeroSection from '@/components/HeroSection';
 import { TypographyH1 } from '@/components/ui/typography/TypographyH1';
-import { TypographyH3 } from '@/components/ui/typography/TypographyH3';
-import { TypographyLead } from '@/components/ui/typography/TypographyLead';
 import { TypographyP } from '@/components/ui/typography/TypographyP';
 
 export const metadata = {
@@ -14,7 +11,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <HeroImage src="/hero-1.jpg" alt="nlvc home page hero image" />
+      <HeroSection />
       <div className="container mx-auto py-36 md:py-40">
         <div>
           <TypographyH1>Sunday Service</TypographyH1>
