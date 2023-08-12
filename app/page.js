@@ -13,10 +13,14 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <div className="container mx-auto py-36 md:py-40 text-center">
+      <div className="container mx-auto py-36 md:py-40">
         <div>
           <TypographyH1>Sunday Service</TypographyH1>
-          <TypographyP>Join us for worship at 11:30 AM &#128522;</TypographyP>
+          <TypographyP>
+            Join us for worship at 11:30 AM
+            <br />
+            Parking is free! &#128522;
+          </TypographyP>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8">
             <div className="relative h-60 sm:h-[400px] lg:h-[500px] w-full md:flex-1">
               <Image
@@ -35,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-20">
-          <TypographyH1>Events</TypographyH1>
+          <TypographyH1>Upcoming Events</TypographyH1>
         </div>
       </div>
     </div>
