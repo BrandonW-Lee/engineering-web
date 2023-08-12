@@ -55,6 +55,14 @@ const photos = [
     alt: 'womens ministry',
     src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/0a3b4da9-5aa6-4c0a-3ac2-8e6baad9ee00/public',
   },
+  {
+    alt: 'two men discussing softball strategy',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/1451283a-2d96-4838-5928-3c54f366cb00/public',
+  },
+  {
+    alt: 'two men getting ready to play softball',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/62c5ff87-ee49-4306-5031-ff116e81c400/public',
+  },
 ];
 
 export default function Photos() {
