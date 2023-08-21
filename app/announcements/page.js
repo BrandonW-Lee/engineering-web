@@ -6,7 +6,7 @@ import { TypographyP } from '@/components/ui/typography/TypographyP';
 
 export const metadata = {
   title: 'Announcements | THE BRIDGE',
-  description: '',
+  description: 'NLVC bridge Sunday announcements',
 };
 
 export default function Announcements() {

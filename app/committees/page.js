@@ -7,7 +7,8 @@ import Image from 'next/image';
 
 export const metadata = {
   title: 'Committees | THE BRIDGE',
-  description: '',
+  description:
+    "Explore the diverse committees at NLVC Bridge. Volunteer for Co-Op, Missions, Sports, Visual Arts, Welcome, and Women's Ministry. Get involved in event setup, missions coordination, sports ministry, artistry, welcoming new guests, and supporting sisters in the community. Contact each committee via email and learn more about their roles. Check out our vibrant images capturing the essence of each committee. Join us in creating a stronger community together.",
 };
 
 const committees = [

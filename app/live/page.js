@@ -6,7 +6,8 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Live | THE BRIDGE',
-  description: '',
+  description:
+    'Watch New Life Vision Church The Bridge live stream Sundays at 11:30 AM. ',
 };
 
 export default function Live() {

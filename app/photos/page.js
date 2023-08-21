@@ -3,7 +3,8 @@ import Image from 'next/image';
 
 export const metadata = {
   title: 'Photos | THE BRIDGE',
-  description: '',
+  description:
+    "Experience the heart and soul of NLVC The Bridge Church in Glendale, California, through our captivating photo gallery. Immerse yourself in moments of togetherness, vibrant worship, and community gatherings captured in vivid detail. Explore scenes that showcase our church's spirit, from lively discussions to heartfelt worship sessions. Join us in reliving cherished memories and discovering the essence of our church family. Browse now and witness the essence of NLVC The Bridge Church through these captivating snapshots.",
 };
 
 const photos = [

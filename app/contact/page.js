@@ -5,7 +5,7 @@ import { TypographyH2 } from '@/components/ui/typography/TypographyH2';
 
 export const metadata = {
   title: 'Contact | THE BRIDGE',
-  description: '',
+  description: 'Contact New Life Vision Church The Bridge in Glendale, CA. ',
 };
 
 export default function Contact() {

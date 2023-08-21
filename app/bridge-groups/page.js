@@ -3,7 +3,8 @@ import { TypographyH2 } from '@/components/ui/typography/TypographyH2';
 
 export const metadata = {
   title: 'Bridge Groups | THE BRIDGE',
-  description: '',
+  description:
+    'Bridge Groups are weekly gatherings of 8-12 people that meet in homes throughout the city. They are the primary way we connect with others and grow in our faith together. We have groups for different locations throughout Los Angeles.',
 };
 
 export default function BridgeGroups() {

@@ -9,7 +9,8 @@ import Image from 'next/image';
 
 export const metadata = {
   title: 'Staff | THE BRIDGE',
-  description: '',
+  description:
+    "Meet NLVC Bridge's leadership team - Teaching Pastor Benjamin Shin and Associate Pastor Jacob Cho. Benjamin, with over 25 years of experience, is a mentor, teacher, and visionary. Jacob, serving since 2009, holds a Master of Divinity from Talbot School of Theology. Reach out to Benjamin at benjamin.shin@biola.edu or 818-314-0367, and Jacob at jacob105cho@gmail.com or 213-321-2980. View their images and read their bios, showcasing their passion and commitment. Join us under their guidance in Glendale, CA, as we grow together in faith and community.",
 };
 
 const leadership = [
