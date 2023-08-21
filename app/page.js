@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <div className="container mx-auto py-36 md:py-40">
+      <div className="container mx-auto py-36 md:py-40 text-center">
         <div>
           <TypographyH1>Sunday Service</TypographyH1>
           <TypographyP>
