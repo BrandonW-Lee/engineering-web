@@ -92,7 +92,108 @@ export type AnnouncementsPageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = AnnouncementsPageDocument;
+type LiveStreamPageDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Live Stream Page documents
+ */
+interface LiveStreamPageDocumentData {
+  /**
+   * Title field in *Live Stream Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: live_stream_page.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Date field in *Live Stream Page*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: live_stream_page.date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Video Embed URL field in *Live Stream Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: https://www.youtube.com/embed/dK_yrW8siyc
+   * - **API ID Path**: live_stream_page.video_embed_url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  video_embed_url: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Live Stream Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: live_stream_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<LiveStreamPageDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *Live Stream Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: live_stream_page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Live Stream Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: live_stream_page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Live Stream Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: live_stream_page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Live Stream Page document from Prismic
+ *
+ * - **API ID**: `live_stream_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LiveStreamPageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<LiveStreamPageDocumentData>,
+    "live_stream_page",
+    Lang
+  >;
+
+export type AllDocumentTypes =
+  | AnnouncementsPageDocument
+  | LiveStreamPageDocument;
 
 /**
  * Primary content in *AnnouncementBlocks → Items*
@@ -162,6 +263,9 @@ declare module "@prismicio/client" {
       AnnouncementsPageDocument,
       AnnouncementsPageDocumentData,
       AnnouncementsPageDocumentDataSlicesSlice,
+      LiveStreamPageDocument,
+      LiveStreamPageDocumentData,
+      LiveStreamPageDocumentDataSlicesSlice,
       AllDocumentTypes,
       AnnouncementBlockSlice,
       AnnouncementBlockSliceDefaultItem,
