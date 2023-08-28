@@ -11,8 +11,9 @@ export const metadata = {
     'Watch New Life Vision Church The Bridge live stream Sundays at 11:30 AM. ',
 };
 
+const client = createClient();
+
 export default async function Live() {
-  const client = createClient();
   const page = await client.getByUID('live_stream_page', 'live-stream-page');
 
   return (
