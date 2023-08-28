@@ -22,7 +22,6 @@ export default async function Announcements() {
   const formattedAnnouncements = announcementBlocks.map((block) => {
     return block.announcement.reduce(
       (announcement, nextAnnouncement) => {
-        console.log('next', nextAnnouncement);
         if (nextAnnouncement.type === 'paragraph') {
           return {
             title: announcement.title,
