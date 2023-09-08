@@ -92,6 +92,105 @@ export type AnnouncementsPageDocument<Lang extends string = string> =
     Lang
   >;
 
+type BridgeGroupsPageDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Bridge Groups Page documents
+ */
+interface BridgeGroupsPageDocumentData {
+  /**
+   * Title field in *Bridge Groups Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_groups_page.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *Bridge Groups Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_groups_page.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Image field in *Bridge Groups Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_groups_page.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Slice Zone field in *Bridge Groups Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_groups_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<BridgeGroupsPageDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *Bridge Groups Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: bridge_groups_page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Bridge Groups Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_groups_page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Bridge Groups Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: bridge_groups_page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Bridge Groups Page document from Prismic
+ *
+ * - **API ID**: `bridge_groups_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BridgeGroupsPageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<BridgeGroupsPageDocumentData>,
+    "bridge_groups_page",
+    Lang
+  >;
+
 type LiveStreamPageDocumentDataSlicesSlice = never;
 
 /**
@@ -193,6 +292,7 @@ export type LiveStreamPageDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | AnnouncementsPageDocument
+  | BridgeGroupsPageDocument
   | LiveStreamPageDocument;
 
 /**
@@ -263,6 +363,9 @@ declare module "@prismicio/client" {
       AnnouncementsPageDocument,
       AnnouncementsPageDocumentData,
       AnnouncementsPageDocumentDataSlicesSlice,
+      BridgeGroupsPageDocument,
+      BridgeGroupsPageDocumentData,
+      BridgeGroupsPageDocumentDataSlicesSlice,
       LiveStreamPageDocument,
       LiveStreamPageDocumentData,
       LiveStreamPageDocumentDataSlicesSlice,
