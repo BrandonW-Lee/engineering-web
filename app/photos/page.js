@@ -64,6 +64,18 @@ const photos = [
     alt: 'two men getting ready to play softball',
     src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/62c5ff87-ee49-4306-5031-ff116e81c400/public',
   },
+  {
+    alt: 'family at baby dedication ceremony',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/fc959faf-a1bd-4c98-d505-b002ee969800/public',
+  },
+  {
+    alt: 'pastor ben speaking at baby dedication ceremony',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/6f0a5f89-e33d-4ad9-88cb-3e19de3bf300/public',
+  },
+  {
+    alt: 'sam and liz playing with ivy',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8ddeca72-f08b-4c9e-04d3-ba3911369600/public',
+  },
 ];
 
 export default function Photos() {

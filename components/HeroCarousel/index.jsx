@@ -24,6 +24,12 @@ export default function HeroCarousel() {
           src="/hero-1.jpg"
         />
       </SwiperSlide>
+      <SwiperSlide>
+        <HeroImage alt="worship leader" src="/hero-2.jpg" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <HeroImage alt="baby dedication group photo" src="/hero-3.jpg" />
+      </SwiperSlide>
     </Swiper>
   );
 }
