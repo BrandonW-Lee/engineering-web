@@ -10,7 +10,7 @@ export default function HeroSection() {
         <TypographyH1>Welcome to the Bridge</TypographyH1>
         <div className="mt-2">
           <TypographyH3>
-            <em>A Place to Connect</em>
+            <em>A Place to Connect.</em>
           </TypographyH3>
         </div>
       </div>
