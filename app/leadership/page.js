@@ -30,6 +30,14 @@ const leadership = [
     src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/6ebb5bac-15f1-49b1-e785-751119cefe00/public',
     bio: 'Jacob Cho has been serving at New Life Vision Church since 2009. He holds a Master of Divinity degree from Talbot School of Theology. He enjoys watching the Dodgers, Lakers and playing sports. He is married to his beautiful bride, Joy, and a happy father to Evelyn and Ivy.',
   },
+  {
+    name: 'Daniel Tak',
+    title: 'Worship Pastor',
+    email: '',
+    phone: '',
+    src: '',
+    bio: 'Pastor Daniel Tak is a Southern California native and loves everything LA & OC (except the traffic). He received his B.A in English and his Master of Divinity (M.Div) from Talbot School of Theology at BIOLA University. With the conviction that Jesus Christ is the hope of the world, Daniel is committed to the Gospel while partnering with the local church in order to make Christ known and Him, alone, glorified.',
+  },
 ];
 
 export default function Staff() {
@@ -59,16 +67,20 @@ export default function Staff() {
                 <div>
                   <TypographyH3>{leader.name}</TypographyH3>
                   <TypographyLead>{leader.title}</TypographyLead>
-                  <div className="flex mt-2">
-                    <Mail className="h-4 w-4 mr-1" />
-                    <TypographySmall>
-                      <a href={`mailto:${leader.email}`}>{leader.email}</a>
-                    </TypographySmall>
-                  </div>
-                  <div className="flex mt-2">
-                    <Phone className="h-4 w-4 mr-1" />
-                    <TypographySmall>{leader.phone}</TypographySmall>
-                  </div>
+                  {!!leader.email && (
+                    <div className="flex mt-2">
+                      <Mail className="h-4 w-4 mr-1" />
+                      <TypographySmall>
+                        <a href={`mailto:${leader.email}`}>{leader.email}</a>
+                      </TypographySmall>
+                    </div>
+                  )}
+                  {!!leader.phone && (
+                    <div className="flex mt-2">
+                      <Phone className="h-4 w-4 mr-1" />
+                      <TypographySmall>{leader.phone}</TypographySmall>
+                    </div>
+                  )}
                 </div>
                 <TypographyP>{leader.bio}</TypographyP>
               </div>
