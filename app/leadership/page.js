@@ -35,7 +35,7 @@ const leadership = [
     title: 'Worship Pastor',
     email: '',
     phone: '',
-    src: '',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/f7a9e07d-eff8-42c2-b125-9114b1d6a700/public',
     bio: 'Pastor Daniel Tak is a Southern California native and loves everything LA & OC (except the traffic). He received his B.A in English and his Master of Divinity (M.Div) from Talbot School of Theology at BIOLA University. With the conviction that Jesus Christ is the hope of the world, Daniel is committed to the Gospel while partnering with the local church in order to make Christ known and Him, alone, glorified.',
   },
 ];
