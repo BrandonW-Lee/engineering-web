@@ -22,7 +22,9 @@
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": {} }
+        "config": {
+          "choices": { "bridge_group_block": { "type": "SharedSlice" } }
+        }
       }
     },
     "SEO & Metadata": {

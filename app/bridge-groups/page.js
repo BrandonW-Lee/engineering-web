@@ -1,5 +1,10 @@
 import { TypographyH1 } from '@/components/ui/typography/TypographyH1';
 import { TypographyH2 } from '@/components/ui/typography/TypographyH2';
+import { TypographyH3 } from '@/components/ui/typography/TypographyH3';
+import { TypographyH4 } from '@/components/ui/typography/TypographyH4';
+import { TypographyLead } from '@/components/ui/typography/TypographyLead';
+import { TypographyP } from '@/components/ui/typography/TypographyP';
+import { TypographySmall } from '@/components/ui/typography/TypographySmall';
 import { createClient } from '@/prismicio';
 
 export const metadata = {
@@ -16,11 +21,50 @@ export default async function BridgeGroups() {
     'bridge-groups-page'
   );
 
+  const bridgeGroupsByDayOfWeek = page.data.slices.reduce(
+    (bridgeGroups, item) => {
+      if (!bridgeGroups[item.primary.day_of_week]) {
+        bridgeGroups[item.primary.day_of_week] = [item.primary];
+        return bridgeGroups;
+      }
+
+      bridgeGroups[item.primary.day_of_week].push(item.primary);
+      return bridgeGroups;
+    },
+    {}
+  );
+
+  const bridgeGroupsByDayOfWeekArray = Object.keys(bridgeGroupsByDayOfWeek).map(
+    (key) => {
+      return {
+        dayOfWeek: key,
+        bridgeGroups: bridgeGroupsByDayOfWeek[key],
+      };
+    }
+  );
+
   return (
     <div className="container mx-auto py-12 sm:pb-24">
       <TypographyH1>{page.data.title}</TypographyH1>
       <div className="mt-12">
         <TypographyH2>{page.data.subtitle}</TypographyH2>
+      </div>
+      <div className="mt-8">
+        {bridgeGroupsByDayOfWeekArray.map(({ bridgeGroups, dayOfWeek }) => {
+          return (
+            <div key={dayOfWeek} className="mt-8">
+              <TypographyH3>{dayOfWeek}</TypographyH3>
+              {bridgeGroups.map(({ facilitators, location }) => {
+                return (
+                  <div key={facilitators} className="mt-6">
+                    <TypographyLead>{location}</TypographyLead>
+                    <TypographySmall>with {facilitators}</TypographySmall>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

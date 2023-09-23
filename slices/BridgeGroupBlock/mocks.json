@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"day_of_week": {
+				"__TYPE__": "FieldContent",
+				"value": "very",
+				"type": "Text"
+			},
+			"facilitators": {
+				"__TYPE__": "FieldContent",
+				"value": "middle",
+				"type": "Text"
+			},
+			"location": {
+				"__TYPE__": "FieldContent",
+				"value": "success",
+				"type": "Text"
+			},
+			"contact_info": {
+				"__TYPE__": "FieldContent",
+				"value": "pleasure",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

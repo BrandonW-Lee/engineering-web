@@ -92,7 +92,7 @@ export type AnnouncementsPageDocument<Lang extends string = string> =
     Lang
   >;
 
-type BridgeGroupsPageDocumentDataSlicesSlice = never;
+type BridgeGroupsPageDocumentDataSlicesSlice = BridgeGroupBlockSlice;
 
 /**
  * Content for Bridge Groups Page documents
@@ -350,6 +350,81 @@ export type AnnouncementBlockSlice = prismic.SharedSlice<
   AnnouncementBlockSliceVariation
 >;
 
+/**
+ * Primary content in *BridgeGroupBlock → Primary*
+ */
+export interface BridgeGroupBlockSliceDefaultPrimary {
+  /**
+   * Day of Week field in *BridgeGroupBlock → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_group_block.primary.day_of_week
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  day_of_week: prismic.KeyTextField;
+
+  /**
+   * Facilitators field in *BridgeGroupBlock → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_group_block.primary.facilitators
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  facilitators: prismic.KeyTextField;
+
+  /**
+   * Location field in *BridgeGroupBlock → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_group_block.primary.location
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  location: prismic.KeyTextField;
+
+  /**
+   * Contact Info field in *BridgeGroupBlock → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bridge_group_block.primary.contact_info
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  contact_info: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for BridgeGroupBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BridgeGroupBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BridgeGroupBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BridgeGroupBlock*
+ */
+type BridgeGroupBlockSliceVariation = BridgeGroupBlockSliceDefault;
+
+/**
+ * BridgeGroupBlock Shared Slice
+ *
+ * - **API ID**: `bridge_group_block`
+ * - **Description**: BridgeGroupBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BridgeGroupBlockSlice = prismic.SharedSlice<
+  "bridge_group_block",
+  BridgeGroupBlockSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -374,6 +449,10 @@ declare module "@prismicio/client" {
       AnnouncementBlockSliceDefaultItem,
       AnnouncementBlockSliceVariation,
       AnnouncementBlockSliceDefault,
+      BridgeGroupBlockSlice,
+      BridgeGroupBlockSliceDefaultPrimary,
+      BridgeGroupBlockSliceVariation,
+      BridgeGroupBlockSliceDefault,
     };
   }
 }

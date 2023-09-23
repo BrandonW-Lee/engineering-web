@@ -4,4 +4,5 @@ import dynamic from "next/dynamic";
 
 export const components = {
   announcement_block: dynamic(() => import("./AnnouncementBlocks")),
+  bridge_group_block: dynamic(() => import("./BridgeGroupBlock")),
 };
