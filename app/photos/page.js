@@ -76,6 +76,10 @@ const photos = [
     alt: 'sam and liz playing with ivy',
     src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8ddeca72-f08b-4c9e-04d3-ba3911369600/public',
   },
+  {
+    alt: 'bowling group photo',
+    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8314c03b-df09-467a-e0b1-0f92d1c39700/public',
+  },
 ];
 
 export default function Photos() {

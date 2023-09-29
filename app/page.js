@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         {/* <div className="mt-20">
-          <TypographyH1>Upcoming Events</TypographyH1>
+          <TypographyH1>Events</TypographyH1>
         </div> */}
       </div>
     </div>
