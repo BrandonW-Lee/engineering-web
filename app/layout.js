@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Toaster } from '@/components/ui/toaster';
-import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,7 +20,6 @@ export default function RootLayout({ children }) {
         <Footer />
         <Toaster />
       </body>
-      <Script src="https://tithe.ly/widget/v3/give.js?3" />
     </html>
   );
 }
