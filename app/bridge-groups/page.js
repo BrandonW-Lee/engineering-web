@@ -42,8 +42,6 @@ export default async function BridgeGroups() {
   //   }
   // );
 
-  console.log('wtf', page.data);
-
   return (
     <div className="container mx-auto py-12 sm:pb-24">
       <TypographyH1>{page.data.title}</TypographyH1>
