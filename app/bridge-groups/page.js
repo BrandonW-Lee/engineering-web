@@ -1,9 +1,7 @@
 import { TypographyH1 } from '@/components/ui/typography/TypographyH1';
 import { TypographyH2 } from '@/components/ui/typography/TypographyH2';
 import { TypographyH3 } from '@/components/ui/typography/TypographyH3';
-import { TypographyH4 } from '@/components/ui/typography/TypographyH4';
 import { TypographyLead } from '@/components/ui/typography/TypographyLead';
-import { TypographyP } from '@/components/ui/typography/TypographyP';
 import { TypographySmall } from '@/components/ui/typography/TypographySmall';
 import { createClient } from '@/prismicio';
 
