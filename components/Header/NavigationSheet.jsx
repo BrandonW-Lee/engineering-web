@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Menu } from 'lucide-react';
+import { Mail, Menu } from 'lucide-react';
 
 import { Button } from '../ui/button';
 import {
@@ -91,7 +91,15 @@ export default function NavigationSheet() {
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <GiveButton />
+                <Link
+                  href="https://tithe.ly/give_new/www/#/tithely/give-one-time/411909"
+                  passHref
+                >
+                  <Button>
+                    <Mail className="mr-2 h-4 w-4" />
+                    Give
+                  </Button>
+                </Link>
               </SheetClose>
             </div>
           </SheetFooter>
