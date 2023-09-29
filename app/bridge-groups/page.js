@@ -24,7 +24,7 @@ export default async function BridgeGroups() {
         <TypographyH2>{page.data.subtitle}</TypographyH2>
       </div>
       <div className="mt-8 ">
-        <div className="relative w-full sm:w-4/5 md:w-1/2 h-[540px] sm:h-screen mx-auto ">
+        <div className="relative w-full md:w-4/5 lg:w-2/3 h-[540px] sm:h-screen mx-auto ">
           <Image src={page.data.image.url} alt={page.data.image.alt} fill />
         </div>
       </div>
