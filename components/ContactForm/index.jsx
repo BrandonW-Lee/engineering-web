@@ -40,10 +40,27 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(data) {
-    toast({
-      title: 'Your message has been sent!',
+  async function onSubmit(data) {
+    const res = await fetch('/api/sendgrid', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
     });
+    const json = await res.json();
+
+    if (!!json.error) {
+      toast({
+        title: 'Uh oh! Something went wrong.',
+        description: json.error,
+        variant: 'destructive',
+      });
+    } else {
+      toast({
+        title: 'Your message has been sent!',
+      });
+    }
     form.reset();
   }
 
