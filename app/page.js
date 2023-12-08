@@ -1,7 +1,8 @@
+import Image from 'next/image';
+
 import HeroSection from '@/components/HeroSection';
 import { TypographyH1 } from '@/components/ui/typography/TypographyH1';
 import { TypographyP } from '@/components/ui/typography/TypographyP';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'NLVC | THE BRIDGE',
@@ -14,7 +15,28 @@ export default function Home() {
     <div>
       <HeroSection />
       <div className="container mx-auto py-36 md:py-40 text-center">
-        <div>
+        <section>
+          <TypographyH1>Introducing Our Elder Nominees</TypographyH1>
+          <div className="flex flex-col mt-8 gap-4 md:flex-row md:h-96">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/HIlG8KrqNTs?si=oocA5nYAs8TNk2WW"
+              title="introducing elder nominee robert suh"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/w-WTfUvaWag?si=VCzb8tGwVbZthP3y"
+              title="introducing elder nominee dein lim"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </section>
+        <section className="mt-12 md:mt-20">
           <TypographyH1>Sunday Service</TypographyH1>
           <TypographyP>
             Join us for worship at 11:30 AM
@@ -37,7 +59,7 @@ export default function Home() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-        </div>
+        </section>
         {/* <div className="mt-20">
           <TypographyH1>Events</TypographyH1>
         </div> */}
