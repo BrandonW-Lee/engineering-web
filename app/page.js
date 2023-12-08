@@ -16,7 +16,7 @@ export default function Home() {
       <HeroSection />
       <div className="container mx-auto py-36 md:py-40 text-center">
         <section>
-          <TypographyH1>Introducing Our Elder Nominees</TypographyH1>
+          <TypographyH1>Meet Our Elder Nominees</TypographyH1>
           <div className="flex flex-col mt-8 gap-4 md:flex-row md:h-96">
             <iframe
               width="100%"
@@ -31,6 +31,35 @@ export default function Home() {
               height="100%"
               src="https://www.youtube.com/embed/w-WTfUvaWag?si=VCzb8tGwVbZthP3y"
               title="introducing elder nominee dein lim"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </section>
+        <section className="mt-12 md:mt-20">
+          <TypographyH1>Meet Our Deacon & Deaconess Nominees</TypographyH1>
+          <div className="flex flex-col mt-8 gap-4 md:flex-row md:h-60">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/rknJUGkRsKg?si=4BE5MmgAlOQ5PZ1L"
+              title="introducing deaconess nominee patty lee"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/vLt-8DJK9pY?si=08P4f4JEkBZEJg6w"
+              title="introducing deacon nominee johney park"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/9a5ge-DwrK0?si=qB3nFKLNPHlNpNZF"
+              title="introducing deacon nominee albert ghim"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
