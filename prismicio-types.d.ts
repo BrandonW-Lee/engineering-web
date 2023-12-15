@@ -209,17 +209,6 @@ interface LiveStreamPageDocumentData {
   title: prismic.KeyTextField;
 
   /**
-   * Date field in *Live Stream Page*
-   *
-   * - **Field Type**: Date
-   * - **Placeholder**: *None*
-   * - **API ID Path**: live_stream_page.date
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#date
-   */
-  date: prismic.DateField;
-
-  /**
    * Video Embed URL field in *Live Stream Page*
    *
    * - **Field Type**: Text

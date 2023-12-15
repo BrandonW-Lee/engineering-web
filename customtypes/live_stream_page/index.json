@@ -11,10 +11,6 @@
         "type": "Text",
         "config": { "label": "Title", "placeholder": "" }
       },
-      "date": {
-        "type": "Date",
-        "config": { "label": "Date", "placeholder": "" }
-      },
       "video_embed_url": {
         "type": "Text",
         "config": {
