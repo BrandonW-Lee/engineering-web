@@ -16,7 +16,7 @@ export default function Home() {
       <HeroSection />
       <div className="container mx-auto py-36 md:py-40 text-center">
         <section>
-          <TypographyH1>Meet Our Elder Nominees</TypographyH1>
+          <TypographyH1>Introducing Our Elders</TypographyH1>
           <div className="flex flex-col mt-8 gap-4 md:flex-row md:h-96">
             <iframe
               width="100%"
@@ -37,8 +37,8 @@ export default function Home() {
           </div>
         </section>
         <section className="mt-12 md:mt-20">
-          <TypographyH1>Meet Our Deacon & Deaconess Nominees</TypographyH1>
-          <div className="flex flex-col mt-8 gap-4 md:flex-row md:h-60">
+          <TypographyH1>Introducing Our Deacons & Deaconess</TypographyH1>
+          <div className="flex flex-col mt-8 gap-4 md:flex-row md:h-60 overflow-x-scroll">
             <iframe
               width="100%"
               height="100%"
@@ -89,9 +89,6 @@ export default function Home() {
             />
           </div>
         </section>
-        {/* <div className="mt-20">
-          <TypographyH1>Events</TypographyH1>
-        </div> */}
       </div>
     </div>
   );
