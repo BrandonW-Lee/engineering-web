@@ -17,42 +17,42 @@ const committees = [
     description:
       'Volunteers who are willing and able to set up, arrange, build, and tear down equipment, chairs, stages, tables for our different ministry events.',
     email: 'operations@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/55dc5391-d74f-4e4a-a444-fe5408691600/public',
+    src: '/committees/committees-coop.jpg',
   },
   {
     title: 'Missions',
     description:
       'Volunteers who help coordinate, plan, and support the local and overseas missions efforts of the Bridge.',
     email: 'missions@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/d506978d-2e1b-4c84-292a-982dc9659500/public',
+    src: '/committees/committees-missions.jpg',
   },
   {
     title: 'Sports',
     description:
       'Volunteers who help coordinate and plan our sports ministry of the Bridge. This includes supporting all sports and sports-related fundraisers.',
     email: 'sports@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/d63cbc6e-dd6b-4b73-4272-d27bbe620a00/public',
+    src: '/committees/committees-sports.jpg',
   },
   {
     title: 'Visual Arts',
     description:
       'Volunteers who are artistically gifted and willing to design, create, paint, make, build, and illustrate images for the church.',
     email: 'arts@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/b13b9a9d-bd35-4b31-1337-ffbfaa101c00/public',
+    src: '/committees/committees-art.jpg',
   },
   {
     title: 'Welcome',
     description:
       'Volunteers who greet and welcome new guests to our Sunday worship service. This includes follow up and integration of new guests to the regular membership of the church.',
     email: 'welcome@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/84cf95d1-df27-4ef3-7ee2-30194da6fa00/public',
+    src: '/committees/committees-welcome.jpg',
   },
   {
     title: "Women's Ministry",
     description:
       "Volunteers who help coordinate, plan, and support the Women's ministry of the Bridge. This includes soul care, and all other ministries focusing on the sisters of the Bridge.",
     email: 'women@nlvcbridge.com',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/7ff871bf-7275-46ad-71e4-3d3260302900/public',
+    src: '/committees/committees-women.jpg',
   },
 ];
 

@@ -9,72 +9,72 @@ export const metadata = {
 
 const photos = [
   {
-    alt: 'group sitting in a circle',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8afe7e4b-9070-4baf-1447-16e869175100/public',
+    alt: 'large group playing games in a circle',
+    src: '/photos/retreat-1.jpg',
   },
   {
     alt: 'group walking through the city at night',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/a460585a-c9b7-4328-934d-e756f2d7c400/public',
+    src: '/photos/retreat-2.jpg',
   },
   {
     alt: 'group photo with a cake in front of sign',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/4ed61bfa-88ca-4f84-865b-bc4335af5b00/public',
+    src: '/photos/retreat-3.jpg',
+  },
+  {
+    alt: 'group in circle talking',
+    src: '/photos/retreat-4.jpg',
   },
   {
     alt: 'worship in conference room',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/5f042c45-742c-4a8f-8c08-a7219d808c00/public',
+    src: '/photos/retreat-5.jpg',
   },
   {
     alt: 'guys talking while eating in-n-out',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/c6da4fac-f0b4-4c38-f3ec-4cb33127ef00/public',
+    src: '/photos/retreat-6.jpg',
   },
   {
     alt: 'group hanging out while drinking soda',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/fa7a47bd-4528-49bb-af43-bb6b6bebe600/public',
+    src: '/photos/retreat-7.jpg',
   },
   {
     alt: 'group of 8 at a restaurant table',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/ca7f55b1-500f-428c-edc6-2e5e515e0300/public',
-  },
-  {
-    alt: 'large group playing games in a circle',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/6b06b119-fe1f-4140-df56-de917d862300/public',
+    src: '/photos/retreat-8.jpg',
   },
   {
     alt: 'man setting up donuts',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/ac9dcd62-acab-4ff9-7fb1-ab405c9f1000/public',
+    src: '/photos/mens-bbq-1.jpg',
   },
   {
     alt: 'guys pointing at bbq food',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8bb5ef9e-d8d3-40df-bc23-3845bbd56700/public',
+    src: '/photos/mens-bbq-2.jpg',
   },
   {
     alt: 'two guys arm wrestling',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/de21c6bb-cdea-458b-2a75-702882bfb000/public',
+    src: '/photos/mens-bbq-3.jpg',
   },
   {
     alt: 'womens ministry',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/0a3b4da9-5aa6-4c0a-3ac2-8e6baad9ee00/public',
+    src: '/photos/womens-ministry.jpg',
   },
   {
     alt: 'two men discussing softball strategy',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/1451283a-2d96-4838-5928-3c54f366cb00/public',
+    src: '/photos/softball-1.jpg',
   },
   {
     alt: 'two men getting ready to play softball',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/62c5ff87-ee49-4306-5031-ff116e81c400/public',
+    src: '/photos/softball-2.jpg',
   },
   {
     alt: 'family at baby dedication ceremony',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/fc959faf-a1bd-4c98-d505-b002ee969800/public',
+    src: '/photos/baby-dedication-1.jpg',
   },
   {
     alt: 'pastor ben speaking at baby dedication ceremony',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/6f0a5f89-e33d-4ad9-88cb-3e19de3bf300/public',
+    src: '/photos/baby-dedication-2.jpg',
   },
   {
     alt: 'sam and liz playing with ivy',
-    src: 'https://imagedelivery.net/_hFr1roF71hCDtIXUIgrjw/8ddeca72-f08b-4c9e-04d3-ba3911369600/public',
+    src: '/photos/baby-dedication-3.jpg',
   },
   {
     alt: 'bowling group photo',
