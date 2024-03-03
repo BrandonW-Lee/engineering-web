@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Send } from 'lucide-react';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
-
-import { Button } from '@/components/ui/button';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Send } from "lucide-react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { InlineWidget } from "react-calendly";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -13,20 +13,20 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { toast } from '@/components/ui/use-toast';
-import { Textarea } from '../ui/textarea';
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/components/ui/use-toast";
+import { Textarea } from "../ui/textarea";
 
 const FormSchema = z.object({
   name: z.string().min(3, {
-    message: 'Name must be at least 3 characters.',
+    message: "Name must be at least 3 characters.",
   }),
   email: z.string().email({
-    message: 'Please enter a valid email address.',
+    message: "Please enter a valid email address.",
   }),
   message: z.string().min(10, {
-    message: 'Message must be at least 10 characters.',
+    message: "Message must be at least 10 characters.",
   }),
 });
 
@@ -34,17 +34,17 @@ export default function ContactForm() {
   const form = useForm({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      message: '',
+      name: "",
+      email: "",
+      message: "",
     },
   });
 
   async function onSubmit(data) {
-    const res = await fetch('/api/sendgrid', {
-      method: 'POST',
+    const res = await fetch("/api/sendgrid", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });
@@ -52,13 +52,13 @@ export default function ContactForm() {
 
     if (!!json.error) {
       toast({
-        title: 'Uh oh! Something went wrong.',
+        title: "Uh oh! Something went wrong.",
         description: json.error,
-        variant: 'destructive',
+        variant: "destructive",
       });
     } else {
       toast({
-        title: 'Your message has been sent!',
+        title: "Your message has been sent!",
       });
     }
     form.reset();
@@ -66,15 +66,21 @@ export default function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className='w-full space-y-6'
+      >
         <FormField
           control={form.control}
-          name="name"
+          name='name'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your name" {...field} />
+                <Input
+                  placeholder='Your name'
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -82,12 +88,16 @@ export default function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="email"
+          name='email'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="Your email" {...field} />
+                <Input
+                  type='email'
+                  placeholder='Your email'
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -95,7 +105,7 @@ export default function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="message"
+          name='message'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Message</FormLabel>
@@ -110,8 +120,8 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">
-          <Send className="mr-2 h-4 w-4" />
+        <Button type='submit'>
+          <Send className='mr-2 h-4 w-4' />
           Send
         </Button>
       </form>
