@@ -55,6 +55,17 @@ interface BlogPageDocumentData {
   publication_date: prismic.DateField;
 
   /**
+   * Content field in *Blogs Page*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_page.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
    * Slice Zone field in *Blogs Page*
    *
    * - **Field Type**: Slice Zone
