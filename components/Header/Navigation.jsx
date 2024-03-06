@@ -19,7 +19,7 @@ export default function Navigation() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link
-            href='/welcome'
+            href='/about'
             legacyBehavior
             passHref
           >
@@ -41,12 +41,12 @@ export default function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link
-            href='/photos'
+            href='/services'
             legacyBehavior
             passHref
           >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Media
+              Services
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
