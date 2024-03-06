@@ -1,10 +1,9 @@
 import Image from "next/image";
 
-import HeroSection from "@/components/HeroSection";
-import CompanySection from "@/components/CompanySection";
-import { TypographyH1 } from "@/components/ui/typography/TypographyH1";
-import { TypographyP } from "@/components/ui/typography/TypographyP";
-import CompnaySection from "@/components/CompanySection";
+import HeroSection from "../components/HeroSection";
+import CompanySection from "../components/CompanySection";
+import { TypographyH1 } from "../components/ui/typography/TypographyH1";
+import { TypographyP } from "../components/ui/typography/TypographyP";
 
 export const metadata = {
   title: "NLVC | THE BRIDGE",

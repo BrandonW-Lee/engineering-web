@@ -1,4 +1,4 @@
-import { TypographyH1 } from "@/components/ui/typography/TypographyH1";
+import { TypographyH1 } from "../../components/ui/typography/TypographyH1";
 import Image from "next/image";
 
 export const metadata = {

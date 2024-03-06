@@ -5,7 +5,7 @@ import { Send } from "lucide-react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { InlineWidget } from "react-calendly";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   Form,
   FormControl,
@@ -13,9 +13,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
+} from "../../components/ui/form";
+import { Input } from "../../components/ui/input";
+import { toast } from "../../components/ui/use-toast";
 import { Textarea } from "../ui/textarea";
 
 const FormSchema = z.object({
