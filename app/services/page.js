@@ -10,75 +10,39 @@ export const metadata = {
 const photos = [
   {
     alt: "large group playing games in a circle",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img.png",
   },
   {
     alt: "group walking through the city at night",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img-1.png",
   },
   {
     alt: "group photo with a cake in front of sign",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img-2.png",
   },
   {
     alt: "group in circle talking",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img-3.png",
   },
   {
     alt: "worship in conference room",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img-4.png",
   },
   {
     alt: "guys talking while eating in-n-out",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img-5.png",
   },
   {
     alt: "group hanging out while drinking soda",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img-6.png",
   },
   {
     alt: "group of 8 at a restaurant table",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img-7.png",
   },
   {
     alt: "man setting up donuts",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "guys pointing at bbq food",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "two guys arm wrestling",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "womens ministry",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "two men discussing softball strategy",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "two men getting ready to play softball",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "family at baby dedication ceremony",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "pastor ben speaking at baby dedication ceremony",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "sam and liz playing with ivy",
-    src: "/photos/pencil-blueprint.png",
-  },
-  {
-    alt: "bowling group photo",
-    src: "/photos/pencil-blueprint.png",
+    src: "/photos/Img-8.png",
   },
 ];
 

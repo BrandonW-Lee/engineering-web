@@ -4,6 +4,7 @@ import { TypographyH2 } from "@/components/ui/typography/TypographyH2";
 import { TypographyH3 } from "@/components/ui/typography/TypographyH3";
 import { TypographyH4 } from "@/components/ui/typography/TypographyH4";
 import { TypographyP } from "@/components/ui/typography/TypographyP";
+import Image from "next/image";
 
 export const metadata = {
   title: "Welcome | THE BRIDGE",
@@ -11,74 +12,70 @@ export const metadata = {
     "Discover the Good News of the Gospel | Learn how to enter into a relationship with God through the person of Jesus Christ. Explore key Bible verses, including Romans 3:23, 6:23, 5:8, and 10:9-10. Rejoice in the care and provision of God with Romans 8:1. THE BRIDGE invites you to embrace the free gift of eternal life in Christ Jesus our Lord.",
 };
 
-const verses = [
+const photos = [
   {
-    title: "Recognize that you fall short and that you are a sinner.",
-    quote: '"For all have sinned and fall short of the glory of God"',
-    reference: "Romans 3:23",
+    alt: "large group playing games in a circle",
+    src: "/photos/pencil-blueprint.png",
   },
   {
-    title: "Realize that there is significant consequence for being a sinner.",
-    quote:
-      '"For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord."',
-    reference: "Romans 6:23",
-  },
-  {
-    title: "Receive the truth that Jesus Christ died for you and your sins!",
-    quote:
-      '"But God shows his love for us in that while we were still sinners, Christ died for us."',
-    reference: "Romans 5:8",
-  },
-  {
-    title:
-      "Repent (change your mind) and accept the free gift of eternal life.",
-    quote:
-      '"Because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved. For with the heart one believes and is justified, and with the mouth one confesses and is saved."',
-    reference: "Romans 10:9-10",
-  },
-  {
-    title: "Rejoice that you are now under God’s care and provision.",
-    quote:
-      '"There is therefore now no condemnation for those who are in Christ Jesus"',
-    reference: "Romans 8:1",
+    alt: "large group playing games in a circle",
+    src: "/photos/pencil-blueprint.png",
   },
 ];
 
 export default function About() {
   return (
-    <div className='container mx-auto py-12 sm:pb-24'>
-      <TypographyH1>About</TypographyH1>
-      <section className='mt-12'>
-        <TypographyH2>The Good News of the Gospel</TypographyH2>
-        <div className='mt-8'>
-          <TypographyP>
-            Christianity is more than merely just a religion. It actually is
-            about a relationship with God through the person of the Lord Jesus
-            Christ. Religion tells us to “do” things in order to get to heaven.
-            Christianity invites us into relationship because of the finished
-            work that was “done” for us through the dying of Jesus Christ on the
-            cross. So how does one enter into a relationship with God. Here’s
-            what the Bible tells us:
-          </TypographyP>
+    <div className='container mx-auto sm:pb-24 justify-stretch w-full'>
+      <div className='relative md:h-[400px] h-400 position: absolute object-cover'>
+        {/* 'mt-8 max-w-7xl min-h-800  w-full flex flex-col gap-20 items-center text-slate-700' */}
+        <Image
+          fill
+          className='bg-auto h-400 bg-cover object-cover w-full md:h-[400px] w-screen'
+          src='/photos/Section-Hero.png'
+          alt='hero image'
+          sizes=' 100vw'
+          title='Photos'
+        />
+        <div className='absolute w-full py-2.5 bottom-1/2 inset-x-0 text-xl text-center leading-4'>
+          <p className='text-amber-50'>About</p>
+          <br></br>
+          <p className='text-white'>Trailblazing Project Engineering</p>
         </div>
-        {verses.map((verse, index) => {
-          return (
-            <div
-              className='mt-8'
-              key={verse.title}
-            >
-              <TypographyH3>
-                {index + 1}. {verse.title}
-              </TypographyH3>
-              <div className='sm:w-3/4'>
-                <TypographyBlockquote>{verse.quote}</TypographyBlockquote>{" "}
+      </div>
+      <section className='mt-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2'>
+          {photos.map((photo) => {
+            return (
+              <div
+                className='relative h-60 md:h-72'
+                key={photo.src}
+              >
+                <Image
+                  fill
+                  className='object-cover rounded-md'
+                  src={photo.src}
+                  alt={photo.alt}
+                  sizes='(min-width: 768px) 50vw, 100vw'
+                  loading='lazy'
+                />
               </div>
-              <div className='mt-8 text-right'>
-                <TypographyH4>{verse.reference}</TypographyH4>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+      </section>
+      <section className='mt-12'>
+        <div className=''>
+          <div className='relative h-60 md:h-72'>
+            <Image
+              fill
+              className='object-cover rounded-md'
+              src='/photos/AboutRocket.png'
+              alt='about rockets'
+              sizes='(min-width: 768px) 50vw, 100vw'
+              loading='lazy'
+            />
+          </div>
+        </div>
       </section>
     </div>
   );

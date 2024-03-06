@@ -18,18 +18,20 @@ export default async function BridgeGroups() {
   );
 
   return (
-    <div className='container mx-auto py-12 sm:pb-24'>
-      <TypographyH1>{page.data.title}</TypographyH1>
-      <div className='mt-12'>
-        <TypographyH2>{page.data.subtitle}</TypographyH2>
-      </div>
-      <div className='mt-8 '>
-        <div className='relative w-full md:w-4/5 lg:w-2/3 h-[540px] sm:h-screen mx-auto'>
-          <Image
-            src={page.data.image.url}
-            alt={page.data.image.alt}
-            fill
-          />
+    <div className='container mx-auto py-0 sm:pb-24 justify-stretch'>
+      <div className='relative md:h-[400px] justify-bottom object-cover'>
+        <Image
+          fill
+          className='bg-auto bg-cover object-cover w-full h-full overflow-hidden'
+          src='/photos/Section-Hero.png'
+          alt='hero image'
+          sizes=' 100vw'
+          title='Photos'
+        />
+        <div className='absolute w-full py-2.5 bottom-1/2 inset-x-0 text-xl text-center leading-4'>
+          <p className='text-amber-50'>Blogs</p>
+          <br></br>
+          <p className='text-white'>Trailblazing Project Engineering</p>
         </div>
       </div>
     </div>
