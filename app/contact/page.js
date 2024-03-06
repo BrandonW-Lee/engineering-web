@@ -1,9 +1,9 @@
 "use client";
 
-import { TypographyH1 } from "@/components/ui/typography/TypographyH1";
-import CalendlyButton from "@/components/ContactForm/calendly";
+import { TypographyH1 } from "../../components/ui/typography/TypographyH1";
+import CalendlyButton from "../../components/ContactForm/calendly";
 import ContactForm from "../../components/ContactForm";
-import { TypographyH2 } from "@/components/ui/typography/TypographyH2";
+import { TypographyH2 } from "../../components/ui/typography/TypographyH2";
 import { InlineWidget } from "react-calendly";
 import { React } from "react";
 
