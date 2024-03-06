@@ -30,11 +30,7 @@ export default function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link
-<<<<<<< HEAD
             href='/services'
-=======
-            href='/blog'
->>>>>>> origin/main
             legacyBehavior
             passHref
           >
