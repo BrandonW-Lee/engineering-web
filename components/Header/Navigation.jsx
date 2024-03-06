@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "../../components/ui/navigation-menu";
 import ListItem from "./ListItem";
 
 export default function Navigation() {
@@ -30,7 +30,7 @@ export default function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link
-            href='/blogs'
+            href='/blog'
             legacyBehavior
             passHref
           >

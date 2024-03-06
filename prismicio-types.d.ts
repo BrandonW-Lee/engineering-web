@@ -4,72 +4,259 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type AnnouncementsPageDocumentDataSlicesSlice = AnnouncementBlockSlice;
+type BlogPageDocumentDataSlicesSlice = never;
 
 /**
- * Content for Announcements Page documents
+ * Content for Blogs Page documents
  */
-interface AnnouncementsPageDocumentData {
+interface BlogPageDocumentData {
   /**
-   * Title field in *Announcements Page*
+   * Title field in *Blogs Page*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: announcements_page.title
+   * - **API ID Path**: blog_page.title
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  title: prismic.KeyTextField;
+  title: prismic.RichTextField;
 
   /**
-   * Date field in *Announcements Page*
+   * Description field in *Blogs Page*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_page.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Featured Image field in *Blogs Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_page.featured_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featured_image: prismic.ImageField<never>;
+
+  /**
+   * Publication Date field in *Blogs Page*
    *
    * - **Field Type**: Date
    * - **Placeholder**: *None*
-   * - **API ID Path**: announcements_page.date
+   * - **API ID Path**: blog_page.publication_date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  publication_date: prismic.DateField;
+
+  /**
+   * Slice Zone field in *Blogs Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<BlogPageDocumentDataSlicesSlice> /**
+   * Meta Description field in *Blogs Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: blog_page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Blogs Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Blogs Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: blog_page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Blogs Page document from Prismic
+ *
+ * - **API ID**: `blog_page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BlogPageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<BlogPageDocumentData>,
+    "blog_page",
+    Lang
+  >;
+
+/**
+ * Item in *Navigation → Menu Items*
+ */
+export interface NavigationDocumentDataMenuItemsItem {
+  /**
+   * Label field in *Navigation → Menu Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.menu_items[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Link field in *Navigation → Menu Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.menu_items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Content for Navigation documents
+ */
+interface NavigationDocumentData {
+  /**
+   * Menu Items field in *Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.menu_items[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  menu_items: prismic.GroupField<Simplify<NavigationDocumentDataMenuItemsItem>>;
+}
+
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<NavigationDocumentData>,
+    "navigation",
+    Lang
+  >;
+
+type PostDocumentDataSlicesSlice = never;
+
+/**
+ * Content for post documents
+ */
+interface PostDocumentData {
+  /**
+   * Title field in *post*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *post*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Date field in *post*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.date
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   date: prismic.DateField;
 
   /**
-   * Slice Zone field in *Announcements Page*
+   * HeroImage field in *post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.heroimage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  heroimage: prismic.ImageField<never>;
+
+  /**
+   * Slice Zone field in *post*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: announcements_page.slices[]
+   * - **API ID Path**: post.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<AnnouncementsPageDocumentDataSlicesSlice>
-  /**
-   * Meta Description field in *Announcements Page*
+  slices: prismic.SliceZone<PostDocumentDataSlicesSlice> /**
+   * Meta Description field in *post*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: announcements_page.meta_description
+   * - **API ID Path**: post.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */;
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Announcements Page*
+   * Meta Image field in *post*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: announcements_page.meta_image
+   * - **API ID Path**: post.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   meta_image: prismic.ImageField<never>;
 
   /**
-   * Meta Title field in *Announcements Page*
+   * Meta Title field in *post*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: announcements_page.meta_title
+   * - **API ID Path**: post.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
@@ -77,371 +264,200 @@ interface AnnouncementsPageDocumentData {
 }
 
 /**
- * Announcements Page document from Prismic
+ * post document from Prismic
  *
- * - **API ID**: `announcements_page`
- * - **Repeatable**: `false`
+ * - **API ID**: `post`
+ * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type AnnouncementsPageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<AnnouncementsPageDocumentData>,
-    "announcements_page",
-    Lang
-  >;
-
-type BridgeGroupsPageDocumentDataSlicesSlice = BridgeGroupBlockSlice;
-
-/**
- * Content for Bridge Groups Page documents
- */
-interface BridgeGroupsPageDocumentData {
-  /**
-   * Title field in *Bridge Groups Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_groups_page.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Subtitle field in *Bridge Groups Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_groups_page.subtitle
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  subtitle: prismic.KeyTextField;
-
-  /**
-   * Image field in *Bridge Groups Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_groups_page.image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Slice Zone field in *Bridge Groups Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_groups_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<BridgeGroupsPageDocumentDataSlicesSlice>
-  /**
-   * Meta Description field in *Bridge Groups Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: bridge_groups_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Bridge Groups Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_groups_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *Bridge Groups Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: bridge_groups_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-}
-
-/**
- * Bridge Groups Page document from Prismic
- *
- * - **API ID**: `bridge_groups_page`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type BridgeGroupsPageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<BridgeGroupsPageDocumentData>,
-    "bridge_groups_page",
-    Lang
-  >;
-
-type LiveStreamPageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Live Stream Page documents
- */
-interface LiveStreamPageDocumentData {
-  /**
-   * Title field in *Live Stream Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: live_stream_page.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Video Embed URL field in *Live Stream Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: https://www.youtube.com/embed/dK_yrW8siyc
-   * - **API ID Path**: live_stream_page.video_embed_url
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  video_embed_url: prismic.KeyTextField;
-
-  /**
-   * Slice Zone field in *Live Stream Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: live_stream_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<LiveStreamPageDocumentDataSlicesSlice>
-  /**
-   * Meta Description field in *Live Stream Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: live_stream_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Live Stream Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: live_stream_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *Live Stream Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: live_stream_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-}
-
-/**
- * Live Stream Page document from Prismic
- *
- * - **API ID**: `live_stream_page`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type LiveStreamPageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<LiveStreamPageDocumentData>,
-    "live_stream_page",
-    Lang
-  >;
+export type PostDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PostDocumentData>, "post", Lang>;
 
 export type AllDocumentTypes =
-  | AnnouncementsPageDocument
-  | BridgeGroupsPageDocument
-  | LiveStreamPageDocument;
+  | BlogPageDocument
+  | NavigationDocument
+  | PostDocument;
 
 /**
- * Primary content in *AnnouncementBlocks → Items*
+ * Primary content in *Hero → Primary*
  */
-export interface AnnouncementBlockSliceDefaultItem {
+export interface HeroSliceDefaultPrimary {
   /**
-   * Announcement Title field in *AnnouncementBlocks → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: announcement_block.items[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Accouncement field in *AnnouncementBlocks → Items*
+   * Title field in *Hero → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: announcement_block.items[].announcement
+   * - **API ID Path**: hero.primary.title
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  announcement: prismic.RichTextField;
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 }
 
 /**
- * Default variation for AnnouncementBlocks Slice
+ * Default variation for Hero Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type AnnouncementBlockSliceDefault = prismic.SharedSliceVariation<
+export type HeroSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
-  Simplify<AnnouncementBlockSliceDefaultItem>
->;
-
-/**
- * Slice variation for *AnnouncementBlocks*
- */
-type AnnouncementBlockSliceVariation = AnnouncementBlockSliceDefault;
-
-/**
- * AnnouncementBlocks Shared Slice
- *
- * - **API ID**: `announcement_block`
- * - **Description**: AnnouncementBlock
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type AnnouncementBlockSlice = prismic.SharedSlice<
-  "announcement_block",
-  AnnouncementBlockSliceVariation
->;
-
-/**
- * Primary content in *BridgeGroupBlock → Primary*
- */
-export interface BridgeGroupBlockSliceDefaultPrimary {
-  /**
-   * Day of Week field in *BridgeGroupBlock → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_group_block.primary.day_of_week
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  day_of_week: prismic.KeyTextField;
-
-  /**
-   * Facilitators field in *BridgeGroupBlock → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_group_block.primary.facilitators
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  facilitators: prismic.KeyTextField;
-
-  /**
-   * Location field in *BridgeGroupBlock → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_group_block.primary.location
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  location: prismic.KeyTextField;
-
-  /**
-   * Contact Info field in *BridgeGroupBlock → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: bridge_group_block.primary.contact_info
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  contact_info: prismic.KeyTextField;
-}
-
-/**
- * Default variation for BridgeGroupBlock Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type BridgeGroupBlockSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<BridgeGroupBlockSliceDefaultPrimary>,
+  Simplify<HeroSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *BridgeGroupBlock*
+ * Slice variation for *Hero*
  */
-type BridgeGroupBlockSliceVariation = BridgeGroupBlockSliceDefault;
+type HeroSliceVariation = HeroSliceDefault;
 
 /**
- * BridgeGroupBlock Shared Slice
+ * Hero Shared Slice
  *
- * - **API ID**: `bridge_group_block`
- * - **Description**: BridgeGroupBlock
+ * - **API ID**: `hero`
+ * - **Description**: Hero
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type BridgeGroupBlockSlice = prismic.SharedSlice<
-  "bridge_group_block",
-  BridgeGroupBlockSliceVariation
+export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *BlogBlock → Primary*
+ */
+export interface TitleSliceDefaultPrimary {
+  /**
+   * Title field in *BlogBlock → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * linkToDocument field in *BlogBlock → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.primary.linktodocument
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linktodocument: prismic.LinkField;
+
+  /**
+   * HeroImage field in *BlogBlock → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.primary.heroimage
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  heroimage: prismic.ImageField<never>;
+
+  /**
+   * Description field in *BlogBlock → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *BlogBlock → Items*
+ */
+export interface TitleSliceDefaultItem {
+  /**
+   * Text field in *BlogBlock → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for BlogBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TitleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TitleSliceDefaultPrimary>,
+  Simplify<TitleSliceDefaultItem>
 >;
+
+/**
+ * Slice variation for *BlogBlock*
+ */
+type TitleSliceVariation = TitleSliceDefault;
+
+/**
+ * BlogBlock Shared Slice
+ *
+ * - **API ID**: `title`
+ * - **Description**: Title
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TitleSlice = prismic.SharedSlice<"title", TitleSliceVariation>;
 
 declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
   namespace Content {
     export type {
-      AnnouncementsPageDocument,
-      AnnouncementsPageDocumentData,
-      AnnouncementsPageDocumentDataSlicesSlice,
-      BridgeGroupsPageDocument,
-      BridgeGroupsPageDocumentData,
-      BridgeGroupsPageDocumentDataSlicesSlice,
-      LiveStreamPageDocument,
-      LiveStreamPageDocumentData,
-      LiveStreamPageDocumentDataSlicesSlice,
+      BlogPageDocument,
+      BlogPageDocumentData,
+      BlogPageDocumentDataSlicesSlice,
+      NavigationDocument,
+      NavigationDocumentData,
+      NavigationDocumentDataMenuItemsItem,
+      PostDocument,
+      PostDocumentData,
+      PostDocumentDataSlicesSlice,
       AllDocumentTypes,
-      AnnouncementBlockSlice,
-      AnnouncementBlockSliceDefaultItem,
-      AnnouncementBlockSliceVariation,
-      AnnouncementBlockSliceDefault,
-      BridgeGroupBlockSlice,
-      BridgeGroupBlockSliceDefaultPrimary,
-      BridgeGroupBlockSliceVariation,
-      BridgeGroupBlockSliceDefault,
+      HeroSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceVariation,
+      HeroSliceDefault,
+      TitleSlice,
+      TitleSliceDefaultPrimary,
+      TitleSliceDefaultItem,
+      TitleSliceVariation,
+      TitleSliceDefault,
     };
   }
 }

@@ -4,7 +4,7 @@ export default function CompanyImage({ alt, src }) {
   return (
     <div className=' mt-8 relative h-20 md:h-[200px]'>
       <Image
-        className='object-cover ease-linear'
+        className='object-cover'
         src={src}
         alt={alt}
         priority
