@@ -1,9 +1,3 @@
-import { TypographyBlockquote } from "@/components/ui/typography/TypographyBlockquote";
-import { TypographyH1 } from "@/components/ui/typography/TypographyH1";
-import { TypographyH2 } from "@/components/ui/typography/TypographyH2";
-import { TypographyH3 } from "@/components/ui/typography/TypographyH3";
-import { TypographyH4 } from "@/components/ui/typography/TypographyH4";
-import { TypographyP } from "@/components/ui/typography/TypographyP";
 import Image from "next/image";
 
 export const metadata = {

@@ -41,7 +41,7 @@ export default function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link
-            href='/blogs'
+            href='/blog'
             legacyBehavior
             passHref
           >
