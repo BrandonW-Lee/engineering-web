@@ -19,12 +19,23 @@ export default function Navigation() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link
-            href='/welcome'
+            href='/about'
             legacyBehavior
             passHref
           >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               About
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link
+            href='/services'
+            legacyBehavior
+            passHref
+          >
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Services
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -39,17 +50,7 @@ export default function Navigation() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link
-            href='/photos'
-            legacyBehavior
-            passHref
-          >
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Media
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+
         <NavigationMenuItem>
           <Link
             href='/contact'
